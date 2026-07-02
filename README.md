@@ -282,10 +282,10 @@ $.get('api/check_duplicate.php', {
 - Edge 90+
 
 ---
-r
+
 ## Author
 
-**Kenil Vegad **
+###Kenil Vegad 
 
 Computer Engineering Student 
 
