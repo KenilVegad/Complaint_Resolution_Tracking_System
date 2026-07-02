@@ -285,7 +285,7 @@ $.get('api/check_duplicate.php', {
 
 ## Author
 
-###Kenil Vegad 
+Kenil Vegad 
 
 Computer Engineering Student 
 
