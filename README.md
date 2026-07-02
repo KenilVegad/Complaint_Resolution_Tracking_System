@@ -1,22 +1,5 @@
 # Area-Based Complaint & Resolution Tracking System
 
-
-## Personalization Configuration (Assignment Config Sheet)
-
-| Parameter | Formula | Value |
-|-----------|---------|-------|
-| B (Student Type) | 0 for Regular, 1 for D2D | **0** (Regular) |
-| S (Last 3 digits) | From "075" | **75** |
-| U (Unique Code) | S + (80 × B) = 75 + 0 | **75** |
-| D (Domain) | ((U-1) mod 8) + 1 = (74 mod 8) + 1 | **3** - Road/Pathway Surface Damage |
-| A (Area Model) | ((U-1) mod 4) + 1 = (74 mod 4) + 1 | **3** - Ward → Area → Spot |
-| Initial Response SLA | 5 + ((U-1) mod 4) = 5 + 2 | **7 hours** |
-| Resolution SLA | 24 + (((U-1) mod 6) × 6) = 24 + 12 | **36 hours** |
-| Special Rule | U is Odd → Repeated complaint flagging | **ENABLED** |
-| R (Mandatory Report) | ((U-1) mod 6) + 1 = (74 mod 6) + 1 | **3** - Staff Performance Summary |
-
----
-
 ## System Features
 
 ### 1. Authentication & Authorization
@@ -167,24 +150,6 @@ The Priority Heatmap is an interactive visualization tool that displays complain
 
 **Sample Feedback:** Complaint ROAD-2026-0004 has a 4-star rating with remarks: "Great work! The drain cover was replaced within 2 days. Very satisfied with the quick response."
 
----
-
-## Technology Coverage (Syllabus Checklist)
-
-| Syllabus Topic | Implementation | Files | Status |
-|----------------|----------------|-------|--------|
-| **HTML5/CSS/Responsive Design** | Semantic HTML5, CSS3 custom properties, Flexbox/Grid, Mobile-first responsive design | All `.php` files, `assets/style.css` | ✅ Covered |
-| **PHP Server-Side Programming** | PHP 8.x, OOP-style functions, Session handling, File operations | `config.php`, `*.php` | ✅ Covered |
-| **MySQL CRUD Operations** | CREATE (complaint registration), READ (views, reports), UPDATE (status changes), DELETE (soft delete) | `complaint.php`, `admin_complaints.php`, `staff.php` | ✅ Covered |
-| **Client-Side JavaScript Validation** | Form validation, star rating, dynamic UI updates | `complaint.php`, `register.php` | ✅ Covered |
-| **Server-Side PHP Validation** | Input sanitization, file validation, required field checks | All form processing files | ✅ Covered |
-| **Sessions** | User authentication, role management, flash messages | `login.php`, `logout.php`, all protected pages | ✅ Covered |
-| **Cookies** | Remember selected ward filter for 7 days | `admin.php`, `admin_complaints.php` | ✅ Covered |
-| **File Upload** | Image uploads with validation (JPG/PNG/PDF, max 5MB) | `complaint.php`, `view_complaint_detail.php` | ✅ Covered |
-| **AJAX/jQuery** | Dynamic dropdowns, duplicate checking, live tracking | `complaint.php`, `track.php` | ✅ Covered |
-| **JSON API in PHP** | REST-style endpoints returning JSON data | `api/*.php` files | ✅ Covered |
-
-**All 10 required technologies implemented ✅**
 
 ---
 
@@ -264,37 +229,6 @@ The Priority Heatmap is an interactive visualization tool that displays complain
    - Supervisor: `admin@complaint.gov` / `admin123`
    - Staff: `staff1@complaint.gov` / `staff123`
 
----
-
-## File Structure
-```
-complaint-system/
-├── admin.php              # Supervisor dashboard
-├── admin_complaints.php   # Manage all complaints
-├── api/                   # AJAX API endpoints
-│   ├── get_areas.php
-│   ├── get_spots.php
-│   ├── check_duplicate.php
-│   └── get_complaint.php
-├── assets/
-│   └── style.css         # Main stylesheet
-├── category_master.php    # Manage categories
-├── complaint.php         # Register complaint
-├── config.php           # Configuration & functions
-├── dashboard.php        # Main dashboard (all roles)
-├── database.sql         # Complete database dump
-├── heatmap.php          # Priority heatmap (extra feature)
-├── login.php           # Login page
-├── logout.php          # Logout handler
-├── register.php        # User registration
-├── setup.php          # Auto setup script
-├── staff.php          # Staff dashboard
-├── staff_performance.php # Mandatory report R=3
-├── view_complaints.php   # List complaints
-├── view_complaint_detail.php # Detail view with timeline
-├── uploads/           # File upload directory
-└── README.md          # This file
-```
 
 ---
 
@@ -348,24 +282,19 @@ $.get('api/check_duplicate.php', {
 - Edge 90+
 
 ---
-
+r
 ## Author
-**GEC Bhavnagar - Computer Engineering Department**
 
-Enrollment: 230210107075
-- B = 0, S = 75, U = 75
-- Domain: Road/Pathway Surface Damage
-- Area Model: Ward → Area → Spot
-- SLA: 7h initial / 36h resolution
-- Special Rule: Repeated complaint flagging (U is Odd)
-- Report R=3: Staff Performance Summary
+**Kenil Vegad **
 
----
+Computer Engineering Student 
 
-## License
-This project is created for educational purposes as part of the Web Programming course (3160713) at Government Engineering College, Bhavnagar.
+GitHub: https://github.com/Kenil Vegad
+
+This project was designed and developed as a personal full-stack web application to demonstrate complaint management, workflow automation, role-based authentication, and reporting features using PHP, MySQL, JavaScript, AJAX, and Chart.js.
 
 ---
+
 
 ## Acknowledgments
 - Font Awesome for icons
